@@ -1,0 +1,51 @@
+.img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.stock_in {
+  color: #1e4d3a;
+}
+
+.price {
+  font-weight: 600;
+
+  &__result {
+    font-size: 1em;
+    color: #121212;
+  }
+
+  &__full {
+    font-size: 0.75em;
+    color: #ced2d6;
+  }
+}
+
+.currency {
+  display: flex;
+  gap: 8px;
+
+  &__item {
+    background: #121212;
+    opacity: 0.15;
+    width: 32px;
+    height: 32px;
+
+    &_active {
+      opacity: 1;
+    }
+
+    button {
+      font-size: 1.25rem;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

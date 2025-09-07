@@ -1,0 +1,7 @@
+@mixin multiline-ellipsis($lines: blue) {
+  display: -webkit-box; /* Enables the flexible box layout for line clamping */
+  -webkit-box-orient: vertical; /* Stacks the content vertically */
+  -webkit-line-clamp: $lines; /* Sets the maximum number of lines before truncation */
+  overflow: hidden; /* Hides any content exceeding the line limit */
+  text-overflow: ellipsis;
+}

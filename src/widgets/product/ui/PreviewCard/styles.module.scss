@@ -1,0 +1,74 @@
+@use "mixins";
+
+.card {
+  display: grid;
+  grid-template-columns: auto 32px 1fr;
+  grid-template-areas:
+    "img img img"
+    "type type type"
+    "title title title"
+    "stock stock stock"
+    "price price currency"
+    "cart . link";
+  row-gap: 8px;
+
+  &__img {
+    grid-area: img;
+    margin-bottom: 24px;
+  }
+
+  &__type {
+    grid-area: type;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__title {
+    grid-area: title;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    @include mixins.multiline-ellipsis(2);
+  }
+
+  &__stock {
+    grid-area: stock;
+    margin: 12px 0;
+    font-size: 12px;
+  }
+
+  &__price {
+    grid-area: price;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+  }
+
+  &__currency {
+    grid-area: currency;
+    justify-self: end;
+  }
+
+  &__cart {
+    grid-area: cart;
+    width: 176px;
+  }
+
+  &__link {
+    grid-area: link;
+    align-self: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: #596066;
+  }
+
+  &__link,
+  &__cart {
+    margin-top: 24px;
+  }
+
+  &__fav {
+  }
+}

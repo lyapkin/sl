@@ -1,0 +1,27 @@
+.button {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--c);
+
+  &:disabled {
+    opacity: 0.2;
+  }
+  // @media (hover: hover) {
+  //   &:hover {
+  //     opacity: 0.8;
+  //   }
+  // }
+
+  &__right svg {
+    transform: rotateZ(180deg);
+  }
+}
+
+// @media (max-width: 560px) {
+//   .button {
+//     width: 48px;
+//     height: 48px;
+//   }
+// }

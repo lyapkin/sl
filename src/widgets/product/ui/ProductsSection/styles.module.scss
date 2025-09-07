@@ -1,0 +1,43 @@
+.section {
+  display: grid;
+  grid-template-areas:
+    ". title buttons"
+    "slider slider slider"
+    "link link link";
+  grid-template-columns: 104px 1fr 104px;
+  row-gap: 64px;
+
+  &__title {
+    grid-area: title;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.25rem;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  &__buttons {
+    grid-area: buttons;
+    display: flex;
+    justify-content: space-between;
+
+    // button {
+    //   width: 40px;
+    // }
+  }
+
+  &__slider {
+    grid-area: slider;
+    width: 100%;
+    min-width: 0;
+
+    // > div > div {
+    //   flex-shrink: 1;
+    // }
+  }
+
+  &__link {
+    grid-area: link;
+  }
+}

@@ -1,0 +1,24 @@
+:root {
+  --c: #121212;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 16px;
+  color: var(--c);
+  font-weight: 400;
+}
+
+.container {
+  width: 95%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.hero {
+  padding-top: 120px;
+}
+
+.section {
+  padding: 80px 0;
+}

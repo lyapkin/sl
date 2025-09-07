@@ -1,0 +1,29 @@
+.switch {
+  padding: 2px;
+  width: 36px;
+  height: 20px;
+  display: flex;
+  border-radius: 100px;
+  background-color: #e5e7ea;
+  transition: background-color ease 0.1s;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+      0px 2px 5px rgba(103, 110, 118, 0.08);
+    transition: transform ease 0.1s;
+  }
+
+  &_on {
+    background-color: var(--c);
+
+    &::before {
+      transform: translateX(100%);
+    }
+  }
+}

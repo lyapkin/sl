@@ -1,0 +1,19 @@
+{
+  "header": {
+    "nav": {
+      "catalog": "Catalog",
+      "brands": "Brands",
+      "delivery": "Delivery",
+      "about": "About",
+      "support": "Support",
+      "salon": "For salons"
+    },
+    "lang": {
+      "ru": "Russian",
+      "en": "English"
+    }
+  },
+  "homePage": {
+    "title": "Home"
+  }
+}
