@@ -1,3 +1,4 @@
+"use client";
 import { createContext, useContext } from "react";
 
 interface Context {
@@ -5,7 +6,6 @@ interface Context {
   setOpen: (val: boolean) => void;
   title: string;
   side: "right" | "left";
-  className?: string;
 }
 
 const SheetContext = createContext<Context>({} as Context);

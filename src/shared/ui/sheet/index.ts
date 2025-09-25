@@ -1,5 +1,10 @@
-// import Sheet from "./Sheet";
-// import SheetContent from "./SheetContent";
-// import SheetTrigger from "./SheetTrigger";
+import Main from "./Sheet";
+import SheetContent from "./SheetContent";
+import SheetTrigger from "./SheetTrigger";
 
-// export { Sheet, SheetTrigger, SheetContent };
+const Sheet = Object.assign(Main, {
+  Trigger: SheetTrigger,
+  Content: SheetContent,
+});
+
+export { Sheet };
