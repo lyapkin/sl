@@ -1,6 +1,6 @@
 import { HTMLAttributes, Suspense } from "react";
 import SortContent from "./SortContent";
-import { Skeleton } from "@/src/shared/ui/loading";
+import { Skeleton } from "@/src/shared/ui";
 
 const Sort = ({ className }: HTMLAttributes<HTMLElement>) => {
   return (

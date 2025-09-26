@@ -1,0 +1,25 @@
+@mixin border($place) {
+  border-left: 1px solid #d7dfe9;
+  border-right: 1px solid #d7dfe9;
+  border-#{$place}: 1px solid #d7dfe9;
+}
+$padding: 0 12px;
+
+.sort {
+  z-index: 2;
+
+  &__btn {
+    @include border(top);
+    padding: $padding;
+  }
+
+  &__list {
+    @include border(bottom);
+    background-color: #fff;
+  }
+
+  &__item {
+    height: 40px;
+    padding: $padding;
+  }
+}
