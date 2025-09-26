@@ -4,6 +4,8 @@ import { Link } from "./link";
 import { ArrowButton } from "./arrowButton";
 import { CloseButton } from "./closeButton";
 import { Sheet } from "./sheet";
+import { Skeleton } from "./loading";
+import { Dropdown } from "./dropdown";
 // import { Switch } from "./switch";
 
 export {
@@ -16,4 +18,6 @@ export {
   // SheetTrigger,
   // SheetContent,
   // Switch,
+  Skeleton,
+  Dropdown,
 };
