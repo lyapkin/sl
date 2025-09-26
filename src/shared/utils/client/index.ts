@@ -1,3 +1,4 @@
+import useCloseClickOut from "./useCloseClickOut";
 import useIsInteractive from "./useIsInteractive";
 
-export { useIsInteractive };
+export { useIsInteractive, useCloseClickOut };
