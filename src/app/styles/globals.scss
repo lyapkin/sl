@@ -25,6 +25,10 @@ body {
 
 button {
   cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
 }
 
 button:disabled {
