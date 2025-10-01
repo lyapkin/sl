@@ -1,0 +1,36 @@
+.input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+
+  &__checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    box-shadow: 0px 2px 5px rgba(103, 110, 118, 0.08),
+      0px 0px 0px 1px rgba(103, 110, 118, 0.16), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_checked {
+      background: var(--c);
+      box-shadow: none;
+    }
+  }
+
+  &__title {
+    white-space: nowrap;
+  }
+
+  input {
+    position: absolute;
+    left: -10000px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+  }
+}

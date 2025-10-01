@@ -6,7 +6,8 @@ import { CloseButton } from "./closeButton";
 import { Sheet } from "./sheet";
 import { Skeleton } from "./loading";
 import { Dropdown } from "./dropdown";
-// import { Switch } from "./switch";
+import { Switch } from "./switch";
+import { Checkbox } from "./checkbox";
 
 export {
   Link,
@@ -17,7 +18,8 @@ export {
   Sheet,
   // SheetTrigger,
   // SheetContent,
-  // Switch,
+  Switch,
   Skeleton,
   Dropdown,
+  Checkbox,
 };
