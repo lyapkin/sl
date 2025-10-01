@@ -1,7 +1,12 @@
-import FiltersContext, {
-  useFiltersContext,
-  type Context,
-  initState,
-} from "./FiltersContext";
+import FilterContext, {
+  useFilterContext,
+  // type Context,
+  // initState,
+} from "./FilterContext";
 
-export { FiltersContext, useFiltersContext, Context, initState };
+export {
+  FilterContext,
+  useFilterContext,
+  // Context,
+  // initState
+};
