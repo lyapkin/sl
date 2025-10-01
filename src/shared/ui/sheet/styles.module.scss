@@ -19,6 +19,10 @@
     }
   }
 
+  &__close {
+    align-items: center;
+  }
+
   &__wrapper {
     position: absolute;
     top: 0;
@@ -41,5 +45,12 @@
     background-color: #fff;
     padding: 64px;
     min-width: 360px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__body {
+    flex-grow: 1;
+    min-height: 0;
   }
 }

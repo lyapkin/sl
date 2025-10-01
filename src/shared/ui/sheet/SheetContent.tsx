@@ -44,7 +44,7 @@ const SheetContent = ({ children }: PropsWithChildren) => {
                   onClick={() => setOpen(false)}
                 />
               </header>
-              <div>{children}</div>
+              <div className={s.sheet__body}>{children}</div>
             </motion.div>
           </div>
         </motion.div>
