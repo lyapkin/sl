@@ -1,24 +1,28 @@
 "use client";
-import { PropsWithChildren } from "react";
+import React, { ButtonHTMLAttributes, isValidElement } from "react";
 import { useSheetContext } from "./context";
-import clsx from "clsx";
-import s from "./styles.module.scss";
 
-const SheetTrigger = ({ className, children, ...rest }: Props) => {
+const SheetTrigger = ({
+  children,
+  onClick,
+}: ButtonHTMLAttributes<HTMLButtonElement>) => {
+  const button = React.Children.only(children);
+  if (React.Children.count(children) !== 1 || !isValidElement(button)) {
+    throw new Error("FilterApply gets only one button as children");
+  }
+
   const { setOpen } = useSheetContext();
-  return (
-    <button
-      className={clsx(s.sheet__trigger, className)}
-      {...rest}
-      onClick={() => setOpen(true)}
-    >
-      {children}
-    </button>
-  );
-};
 
-interface Props extends PropsWithChildren {
-  className?: string;
-}
+  const handleClick = (_: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    if (onClick) {
+      onClick(_);
+    }
+    setOpen((prev) => !prev);
+  };
+
+  return React.cloneElement(button, {
+    onClick: handleClick,
+  } as React.ButtonHTMLAttributes<HTMLButtonElement>);
+};
 
 export default SheetTrigger;

@@ -1,9 +1,9 @@
 "use client";
-import { createContext, useContext } from "react";
+import { createContext, Dispatch, SetStateAction, useContext } from "react";
 
 interface Context {
   open: boolean;
-  setOpen: (val: boolean) => void;
+  setOpen: Dispatch<SetStateAction<boolean>>;
   title: string;
   side: "right" | "left";
 }
