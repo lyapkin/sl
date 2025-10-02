@@ -1,3 +1,4 @@
+"use client";
 import { Link } from "@/src/shared/libs";
 import { useProductContext } from "./context";
 import { useTranslations } from "next-intl";

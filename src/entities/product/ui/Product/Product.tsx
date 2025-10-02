@@ -1,3 +1,4 @@
+"use client";
 import { HTMLAttributes } from "react";
 import { ProductPreview } from "../../model";
 import { ProductContext } from "./context";

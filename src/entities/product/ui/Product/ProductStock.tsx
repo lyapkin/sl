@@ -1,3 +1,4 @@
+"use client";
 import { HTMLAttributes } from "react";
 import { useProductContext } from "./context";
 import { useTranslations } from "next-intl";

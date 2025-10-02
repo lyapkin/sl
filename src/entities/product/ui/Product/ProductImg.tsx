@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { useProductContext } from "./context";
 import { HTMLAttributes } from "react";
