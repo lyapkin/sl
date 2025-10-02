@@ -1,9 +1,3 @@
-import {
-  ProductsSection,
-  // ProductsList,
-} from "./ui";
+import { ProductsList } from "./ui";
 
-export {
-  ProductsSection,
-  // ProductsList,
-};
+export { ProductsList };

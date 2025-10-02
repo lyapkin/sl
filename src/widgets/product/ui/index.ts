@@ -1,7 +1,3 @@
-// import { ProductsList } from "./ProductsList";
-import { ProductsSection } from "./ProductsSection";
+import { ProductsList } from "./ProductsList";
 
-export {
-  ProductsSection,
-  // ProductsList,
-};
+export { ProductsList };

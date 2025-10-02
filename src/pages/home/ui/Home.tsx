@@ -1,5 +1,5 @@
-import { ProductsSection } from "@/src/widgets/product";
 import { Hero } from "./Hero";
+import { ProductsSection } from "./ProductsSection";
 
 const Home = () => {
   return (
