@@ -8,7 +8,7 @@ import clsx from "clsx";
 
 const Catalog = ({}: Props) => {
   return (
-    <div>
+    <main>
       <Header className={s.header} />
       <div className={clsx(s.catalog, "container")}>
         {_dumpCategories && _dumpCategories.length > 0 && (
@@ -21,7 +21,7 @@ const Catalog = ({}: Props) => {
         <Sort className={s.catalog__sort} />
         <ProductsList className={s.catalog__products} />
       </div>
-    </div>
+    </main>
   );
 };
 
