@@ -8,6 +8,7 @@ import { Skeleton } from "./loading";
 import { Dropdown } from "./dropdown";
 import { Switch } from "./switch";
 import { Checkbox } from "./checkbox";
+import { Scrollable } from "./scrollable";
 
 export {
   Link,
@@ -22,4 +23,5 @@ export {
   Skeleton,
   Dropdown,
   Checkbox,
+  Scrollable,
 };

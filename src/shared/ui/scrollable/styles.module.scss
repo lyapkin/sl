@@ -1,0 +1,29 @@
+@mixin scroll-shadow($side) {
+  content: "";
+  display: block;
+  position: absolute;
+  #{$side}: 0;
+  top: 0;
+  bottom: 0;
+  width: 44px;
+  background: linear-gradient(to $side, transparent, #fff);
+}
+
+.scroll {
+  position: relative;
+  min-width: 0;
+
+  &_back::before {
+    @include scroll-shadow(left);
+  }
+
+  &_forward::after {
+    @include scroll-shadow(right);
+  }
+
+  &__content {
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+}
