@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { HTMLAttributes } from "react";
+import { ButtonHTMLAttributes } from "react";
 import s from "./styles.module.scss";
 
 const ArrowButton = ({ className, direction, ...rest }: Props) => {
@@ -26,7 +26,7 @@ const ArrowButton = ({ className, direction, ...rest }: Props) => {
   );
 };
 
-interface Props extends HTMLAttributes<HTMLButtonElement> {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   direction: "left" | "right";
 }
 
