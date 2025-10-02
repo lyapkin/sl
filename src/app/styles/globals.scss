@@ -19,8 +19,13 @@ body {
   margin: 0 auto;
 }
 
-.hero {
+.hero,
+.top {
   padding-top: 120px;
+}
+.top-small {
+  box-sizing: content-box;
+  padding-top: 96px;
 }
 
 .section {
