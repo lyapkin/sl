@@ -2,6 +2,10 @@
   --c: #121212;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--main-font);
   font-size: 16px;
