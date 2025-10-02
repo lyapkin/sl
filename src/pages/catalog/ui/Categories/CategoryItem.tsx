@@ -13,7 +13,7 @@ const CategoryItem = ({ category }: Props) => {
 };
 
 interface Props {
-  category: Category["children"][0];
+  category: Category["children"][number];
 }
 
 export default CategoryItem;

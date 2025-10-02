@@ -1,3 +1,3 @@
-import CategoriesList from "./CategoriesList";
+import Categories from "./Categories";
 
-export { CategoriesList };
+export { Categories };
