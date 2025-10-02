@@ -6,7 +6,7 @@ import { ProductsList } from "@/src/widgets/product";
 import s from "./styles.module.scss";
 import clsx from "clsx";
 
-const Catalog = () => {
+const Catalog = ({}: Props) => {
   return (
     <div>
       <Header className={s.header} />
@@ -24,6 +24,10 @@ const Catalog = () => {
     </div>
   );
 };
+
+interface Props {
+  slug?: string;
+}
 
 const _dumpCategories = [
   { id: 1, name: "Категория", slug: "cat1" },
