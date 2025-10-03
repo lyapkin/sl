@@ -1,10 +1,11 @@
 import { ProductBase } from "@/src/entities/product";
+import { HTMLAttributes } from "react";
 
-const AddToFavorite = ({ itemId }: Props) => {
+const AddToFavorite = ({ itemId, ...rest }: Props) => {
   return <></>;
 };
 
-interface Props {
+interface Props extends HTMLAttributes<HTMLElement> {
   itemId: ProductBase["id"];
 }
 
