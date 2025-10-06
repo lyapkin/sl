@@ -1,0 +1,176 @@
+@use "mixins";
+$text-color: #596066;
+
+.product {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: repeat(8, auto) 1fr;
+  column-gap: 32px;
+  padding-bottom: 100px;
+
+  &__imgs {
+    grid-column: 1;
+    grid-row: 1/-1;
+  }
+
+  &__type {
+    grid-column: 2/-1;
+    grid-row: 1;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    grid-column: 2/-1;
+    grid-row: 2;
+    font-weight: 600;
+    font-size: 3.75rem;
+    line-height: 72px;
+    letter-spacing: -0.02em;
+    padding: 24px 0;
+    @include mixins.multiline-ellipsis(2);
+  }
+
+  &__stock {
+    grid-column: 2/-1;
+    grid-row: 3;
+    color: #1e4d3a;
+  }
+
+  &__price {
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  &__actions {
+    grid-column: 2/-1;
+    grid-row: 5;
+  }
+
+  &__description {
+    grid-column: 2/-1;
+    grid-row: 6;
+  }
+
+  &__attrs {
+    grid-column: 2/-1;
+    grid-row: 7;
+  }
+
+  &__ingrs {
+    grid-column: 2/-1;
+    grid-row: 8;
+  }
+}
+
+.imgs {
+  display: flex;
+  gap: 32px;
+  width: 784px;
+  height: 648px;
+
+  &__slider {
+    aspect-ratio: 1/1;
+    order: 2;
+  }
+
+  &__list {
+    order: 1;
+    aspect-ratio: 104/648;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    overflow: auto;
+    scrollbar-width: none;
+  }
+
+  &__slide,
+  &__item {
+    position: relative;
+    aspect-ratio: 1/1;
+  }
+}
+
+.price {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  font-size: 1.335rem;
+  margin-top: 20px;
+  margin-bottom: 60px;
+
+  &__price {
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+  }
+
+  &__currency {
+    height: 1.875em;
+    gap: 16px;
+  }
+}
+
+.description {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  &__code {
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: $text-color;
+    line-height: 1.5rem;
+  }
+}
+
+.attrs {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__name {
+    color: $text-color;
+    width: 180px;
+  }
+
+  &__value {
+    font-weight: 600;
+  }
+}
+
+.ingrs {
+  &__text {
+    color: $text-color;
+    line-height: 1.5rem;
+  }
+}
+
+.block {
+  padding-top: 60px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 8px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
