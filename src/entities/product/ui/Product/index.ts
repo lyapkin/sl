@@ -1,6 +1,5 @@
 import Main from "./Product";
 import ProductAction from "./ProductAction";
-import ProductCurrency from "./ProductCurrency";
 import ProductImg from "./ProductImg";
 import ProductLink from "./ProductLink";
 import ProductPrice from "./ProductPrice";
@@ -10,7 +9,6 @@ import ProductType from "./ProductType";
 
 const Product = Object.assign(Main, {
   Action: ProductAction,
-  Currency: ProductCurrency,
   Img: ProductImg,
   Link: ProductLink,
   Price: ProductPrice,

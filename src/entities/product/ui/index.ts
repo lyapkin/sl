@@ -1,3 +1,4 @@
+import { Price } from "./Price";
 import { Product } from "./Product";
 
-export { Product };
+export { Product, Price };

@@ -9,38 +9,20 @@
 }
 
 .price {
-  font-weight: 600;
-
-  &__result {
-    font-size: 1em;
-    color: #121212;
-  }
-
-  &__full {
-    font-size: 0.75em;
-    color: #ced2d6;
-  }
-}
-
-.currency {
   display: flex;
-  gap: 8px;
+  column-gap: 16px;
+  align-items: center;
+  justify-content: space-between;
 
-  &__item {
-    background: #121212;
-    opacity: 0.15;
-    width: 32px;
-    height: 32px;
+  &__price {
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+  }
 
-    &_active {
-      opacity: 1;
-    }
-
-    button {
-      font-size: 1.25rem;
-      color: #fff;
-      cursor: pointer;
-    }
+  &__currency {
+    gap: 8px;
+    height: 2em;
   }
 }
 

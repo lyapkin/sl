@@ -13,7 +13,6 @@ export const getProductsApi = async (
       {
         id: 1,
         type: "СЫВОРОТКА ДЛЯ ЛИЦА",
-        favorite: false,
         slug: "slug1",
         name: "MA:NYO bifida biome complex ampoule",
         stock: true,
@@ -24,7 +23,6 @@ export const getProductsApi = async (
       {
         id: 2,
         type: "СЫВОРОТКА ДЛЯ ЛИЦА",
-        favorite: false,
         slug: "slug2",
         name: "MA:NYO bifida biome complex ampoule",
         stock: true,
@@ -35,7 +33,6 @@ export const getProductsApi = async (
       {
         id: 3,
         type: "СЫВОРОТКА ДЛЯ ЛИЦА",
-        favorite: false,
         slug: "slug3",
         name: "MA:NYO bifida biome complex ampoule",
         stock: true,
@@ -46,7 +43,6 @@ export const getProductsApi = async (
       {
         id: 4,
         type: "СЫВОРОТКА ДЛЯ ЛИЦА",
-        favorite: false,
         slug: "slug4",
         name: "MA:NYO bifida biome complex ampoule",
         stock: true,
@@ -57,7 +53,6 @@ export const getProductsApi = async (
       {
         id: 5,
         type: "СЫВОРОТКА ДЛЯ ЛИЦА",
-        favorite: false,
         slug: "slug5",
         name: "MA:NYO bifida biome complex ampoule",
         stock: true,
@@ -68,7 +63,6 @@ export const getProductsApi = async (
       {
         id: 6,
         type: "СЫВОРОТКА ДЛЯ ЛИЦА",
-        favorite: false,
         slug: "slug6",
         name: "MA:NYO bifida biome complex ampoule",
         stock: true,
@@ -79,7 +73,6 @@ export const getProductsApi = async (
       {
         id: 7,
         type: "СЫВОРОТКА ДЛЯ ЛИЦА",
-        favorite: false,
         slug: "slug7",
         name: "MA:NYO bifida biome complex ampoule",
         stock: true,
@@ -90,7 +83,6 @@ export const getProductsApi = async (
       {
         id: 8,
         type: "СЫВОРОТКА ДЛЯ ЛИЦА",
-        favorite: false,
         slug: "slug8",
         name: "MA:NYO bifida biome complex ampoule",
         stock: true,

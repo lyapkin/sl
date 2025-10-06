@@ -10,7 +10,6 @@ const PreviewCard = ({ product }: Props) => {
       <Product.Title className={s.card__title} />
       <Product.Stock className={s.card__stock} />
       <Product.Price className={s.card__price} />
-      <Product.Currency className={s.card__currency} />
       <Product.Action className={s.card__cart}>
         <AddToCart itemId={product.id} />
       </Product.Action>
