@@ -9,6 +9,8 @@ import { Dropdown } from "./dropdown";
 import { Switch } from "./switch";
 import { Checkbox } from "./checkbox";
 import { Scrollable } from "./scrollable";
+import { Nav } from "./nav";
+import { Logo } from "./logo";
 
 export {
   Link,
@@ -24,4 +26,6 @@ export {
   Dropdown,
   Checkbox,
   Scrollable,
+  Nav,
+  Logo,
 };

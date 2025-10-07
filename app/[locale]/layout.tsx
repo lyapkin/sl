@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { fonts } from "@/src/app/fonts";
 import "@/src/app/styles/index.scss";
 import { NextIntlClientProvider } from "next-intl";
+import { Header } from "@/src/widgets/header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,10 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={fonts.variable}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
