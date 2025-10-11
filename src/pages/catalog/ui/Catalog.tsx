@@ -30,15 +30,15 @@ interface Props {
 }
 
 const _dumpCategories = [
-  { id: 1, name: "Категория", slug: "cat1" },
-  { id: 2, name: "Категория", slug: "cat2" },
-  { id: 3, name: "Категория", slug: "cat3" },
-  { id: 4, name: "Категория", slug: "cat4" },
-  { id: 5, name: "Категория", slug: "cat5" },
-  { id: 6, name: "Категория", slug: "cat6" },
-  { id: 7, name: "Категория", slug: "cat7" },
-  { id: 8, name: "Категория", slug: "cat8" },
-  { id: 9, name: "Категория", slug: "cat9" },
+  { id: 1, name: "Категория", children: [], slug: "cat1" },
+  { id: 2, name: "Категория", children: [], slug: "cat2" },
+  { id: 3, name: "Категория", children: [], slug: "cat3" },
+  { id: 4, name: "Категория", children: [], slug: "cat4" },
+  { id: 5, name: "Категория", children: [], slug: "cat5" },
+  { id: 6, name: "Категория", children: [], slug: "cat6" },
+  { id: 7, name: "Категория", children: [], slug: "cat7" },
+  { id: 8, name: "Категория", children: [], slug: "cat8" },
+  { id: 9, name: "Категория", children: [], slug: "cat9" },
 ];
 
 export default Catalog;
