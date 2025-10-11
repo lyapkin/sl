@@ -25,15 +25,12 @@ const HeaderWrapper = ({ children }: PropsWithChildren) => {
     };
   }, []);
 
-  if (shrink === null) {
-    return null;
-  }
-
   return (
     <header
       className={clsx(s.wrapper, {
         [s.wrapper_hover]: hover,
         [s.wrapper_shrink]: shrink,
+        [s.wrapper_hidden]: shrink === null,
       })}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
