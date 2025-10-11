@@ -8,15 +8,32 @@
   height: 100%;
   max-height: 120px;
   display: flex;
-  transition: background-color linear 0.2s, max-height linear 0.2s;
+  transition: max-height linear 0.2s;
 
-  &_hover {
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: transparent;
+    transition: background-color linear 0.2s;
+  }
+
+  &_hover::before {
     background-color: #fff;
   }
 
   &_shrink {
     max-height: 72px;
+  }
+
+  &_shrink::before {
     background-color: #fff;
+  }
+
+  &_hidden {
+    max-height: 0;
+    overflow: hidden;
   }
 }
 
@@ -30,10 +47,99 @@
     width: 36px;
     height: 46px;
   }
+
+  &__nav {
+    display: flex;
+    height: 100%;
+  }
 }
 
 .nav {
   display: flex;
   gap: 32px;
   align-items: center;
+
+  &__item {
+    height: 100%;
+  }
+
+  &__link {
+    height: auto;
+  }
+}
+
+.catalog {
+  &__scroll {
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+
+    & > div {
+      height: 100%;
+    }
+  }
+
+  &__root {
+    position: relative;
+    width: 0;
+    height: 100%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 256px;
+    height: 0;
+    overflow: hidden;
+
+    &_display {
+      min-height: 100%;
+      height: auto;
+      overflow: visible;
+      padding: 56px 0;
+    }
+  }
+
+  &__item {
+    font-weight: 600;
+    color: #9ea5ad;
+    padding-right: 16px;
+    line-height: 40px;
+
+    &_hover {
+      color: var(--c);
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    position: fixed;
+    z-index: -2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    max-height: 0;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 0;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.2s, max-height 0s 0.2s, padding-top 0s 0.2s;
+
+    &_open {
+      max-height: 100vh;
+      padding-top: 120px;
+      transition: opacity 0.2s, max-height 0s, padding-top ease 0s;
+      opacity: 1;
+    }
+  }
 }

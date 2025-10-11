@@ -1,11 +1,11 @@
 .nav {
   &__item,
-  &__item a {
+  &__link {
     display: flex;
     align-items: center;
   }
 
-  &__item a {
+  &__link {
     width: 100%;
     height: 100%;
   }
