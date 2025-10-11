@@ -21,16 +21,20 @@ $header-height-shrink: 72px;
     transition: background-color linear 0.2s;
   }
 
-  &_hover::before {
-    background-color: #fff;
+  &_hover {
+    color: var(--c);
+
+    &::before {
+      background-color: #fff;
+    }
   }
 
   &_shrink {
     max-height: 72px;
-  }
 
-  &_shrink::before {
-    background-color: #fff;
+    &::before {
+      background-color: #fff;
+    }
   }
 
   &_hidden {
