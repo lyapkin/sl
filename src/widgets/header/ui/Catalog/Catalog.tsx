@@ -5,9 +5,12 @@ import { useState } from "react";
 import clsx from "clsx";
 import { Category } from "@/src/entities/category";
 import CatalogList from "./CatalogList";
+import { useHeaderContext } from "../../context";
 
 const Catalog = ({ href, title, categories }: Props) => {
   const [hover, setHover] = useState(false);
+
+  const { shrinked } = useHeaderContext();
 
   return (
     <Nav.Item
@@ -25,6 +28,7 @@ const Catalog = ({ href, title, categories }: Props) => {
       <div
         className={clsx(s.catalog__wrapper, {
           [s.catalog__wrapper_open]: hover,
+          [s.catalog__wrapper_open_shrink]: shrinked,
         })}
       >
         <div className={s.catalog__scroll}>

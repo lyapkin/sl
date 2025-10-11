@@ -2,6 +2,7 @@
 import { PropsWithChildren, useEffect, useState } from "react";
 import s from "./styles.module.scss";
 import clsx from "clsx";
+import { HeaderContext } from "../context";
 
 const HeaderWrapper = ({ children }: PropsWithChildren) => {
   const [hover, setHover] = useState(false);
@@ -35,7 +36,13 @@ const HeaderWrapper = ({ children }: PropsWithChildren) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <div className="container">{children}</div>
+      <div className="container">
+        {shrink !== null && (
+          <HeaderContext.Provider value={{ shrinked: shrink }}>
+            {children}
+          </HeaderContext.Provider>
+        )}
+      </div>
     </header>
   );
 };
