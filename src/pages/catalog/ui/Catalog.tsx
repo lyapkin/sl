@@ -5,16 +5,28 @@ import Header from "./Header";
 import { ProductsList } from "@/src/widgets/product";
 import s from "./styles.module.scss";
 import clsx from "clsx";
+import { getCategoryApi } from "@/src/entities/category";
+import { getAllCategoriesApi } from "@/src/entities/category/api/getAllCategoriesApi";
+import { Lang } from "@/src/shared/models";
 
-const Catalog = ({}: Props) => {
+const Catalog = async ({ categorySlug, locale }: Props) => {
+  let title, categoriesList;
+  if (categorySlug) {
+    const category = await getCategoryApi(categorySlug, locale);
+    title = category.name;
+    categoriesList = category.children;
+  } else {
+    categoriesList = await getAllCategoriesApi(locale);
+  }
+
   return (
     <main>
-      <Header className={s.header} />
+      <Header title={title} className={s.header} />
       <div className={clsx(s.catalog, "container")}>
-        {_dumpCategories && _dumpCategories.length > 0 && (
+        {categoriesList.length > 0 && (
           <Categories
             className={s.catalog__categories}
-            categories={_dumpCategories}
+            categories={categoriesList}
           />
         )}
         <Filters className={s.catalog__filters} />
@@ -26,7 +38,8 @@ const Catalog = ({}: Props) => {
 };
 
 interface Props {
-  slug?: string;
+  categorySlug?: string;
+  locale: Lang;
 }
 
 const _dumpCategories = [

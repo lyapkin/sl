@@ -1,9 +1,10 @@
 import { Catalog } from "@/src/pages";
 
-const Page = () => {
+const Page = async ({ params }: PageProps<"/[locale]/catalog">) => {
+  const { locale } = await params;
   return (
     <>
-      <Catalog />
+      <Catalog locale={locale} />
     </>
   );
 };

@@ -1,3 +1,3 @@
-import { type Page, type Metadata } from "./types";
+import { type Page, type Metadata, type Lang } from "./types";
 
-export { Page, Metadata };
+export { Page, Metadata, Lang };

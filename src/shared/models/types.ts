@@ -13,3 +13,5 @@ export type Page = {
   title: string;
   metadata: Metadata | null;
 };
+
+export type Lang = string;
