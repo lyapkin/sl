@@ -3,11 +3,11 @@ import { PreviewCardSkeleton } from "../PreviewCard";
 
 const ProductsListSkeleton = ({ className }: HTMLAttributes<HTMLElement>) => {
   return (
-    <ul className={className}>
+    <div className={className}>
       {arr.map((_, index) => {
         return <PreviewCardSkeleton key={index} />;
       })}
-    </ul>
+    </div>
   );
 };
 

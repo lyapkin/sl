@@ -3,6 +3,7 @@ import { fonts } from "@/src/app/fonts";
 import "@/src/app/styles/index.scss";
 import { NextIntlClientProvider } from "next-intl";
 import { Header } from "@/src/widgets/header";
+import { StoreProvider } from "@/src/app/providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,8 +19,10 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={fonts.variable}>
         <NextIntlClientProvider>
-          <Header />
-          {children}
+          <StoreProvider locale={locale}>
+            <Header />
+            {children}
+          </StoreProvider>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -9,6 +9,16 @@ const nextConfig: NextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "src/app/styles")],
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "8000",
+        pathname: "/media/**",
+      },
+    ],
+  },
 };
 
 const withNextIntl = createNextIntlPlugin("./src/shared/libs/i18n/request.ts");

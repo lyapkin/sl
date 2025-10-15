@@ -1,13 +1,26 @@
+"use client";
 import { HTMLAttributes } from "react";
-import { getProductsApi } from "../../api";
 import { PreviewCard } from "../PreviewCard";
+import { useGetProductsListQuery } from "../../api/productsApi";
+import ProductsListSkeleton from "./ProductsListSkeleton";
 
-const ProductsList = async ({ className }: HTMLAttributes<HTMLElement>) => {
-  const products = await getProductsApi(new URLSearchParams());
-  const content = products.results.map((p) => {
+const ProductsList = ({ className }: HTMLAttributes<HTMLElement>) => {
+  const { data, isError, isLoading, isUninitialized } = useGetProductsListQuery(
+    new URLSearchParams().toString()
+  );
+
+  if (isLoading || isUninitialized) {
+    return <ProductsListSkeleton className={className} />;
+  }
+
+  if (isError) {
+    return null;
+  }
+
+  const content = data.results.map((p) => {
     return <PreviewCard key={p.id} product={p} />;
   });
-  return <div className={className}>{content}</div>;
+  return <ul className={className}>{content}</ul>;
 };
 
 export default ProductsList;

@@ -64,3 +64,78 @@
   &__fav {
   }
 }
+
+.skeleton {
+  display: grid;
+  grid-template-columns: 50% 24px 1fr;
+  grid-template-rows: auto 15px 64px auto 32px auto;
+  grid-template-areas:
+    "img img img"
+    "type type type"
+    "title title title"
+    "stock stock stock"
+    "price . currency"
+    "cart link link";
+  row-gap: 8px;
+  column-gap: 8px;
+
+  &__img {
+    grid-area: img;
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin-bottom: 24px;
+  }
+
+  &__type {
+    grid-area: type;
+    width: 60%;
+  }
+
+  &__title {
+    grid-area: title;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__line {
+    height: 24px;
+
+    &:first-child {
+      width: 95%;
+    }
+
+    &:last-child {
+      width: 70%;
+    }
+  }
+
+  &__stock {
+    grid-area: stock;
+    height: 15px;
+    width: 30%;
+    margin: 12px 0;
+  }
+
+  &__price {
+    grid-area: price;
+  }
+
+  &__currency {
+    grid-area: currency;
+  }
+
+  &__cart {
+    grid-area: cart;
+  }
+
+  &__link {
+    grid-area: link;
+  }
+
+  &__link,
+  &__cart {
+    margin-top: 24px;
+    height: 40px;
+  }
+}
